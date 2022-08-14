@@ -1,4 +1,11 @@
 {
+  "name": "cbunn-portfolio",
+  "version": "0.1.0",
+  "description": "My personal website and portfolio.",
+  "keywords": [],
+  "author": "Christopher Bunn",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/cbunn81/cbunn-portfolio",
   "private": true,
   "scripts": {
     "dev": "next",
