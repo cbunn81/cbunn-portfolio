@@ -1494,6 +1494,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cbunn-portfolio@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "cbunn-portfolio@workspace:."
+  dependencies:
+    "@chakra-ui/icons": ^2.0.2
+    "@chakra-ui/react": ^2.2.1
+    "@chakra-ui/theme-tools": ^2.0.2
+    "@emotion/react": ^11.9.0
+    "@emotion/styled": ^11.9.0
+    "@types/node": ^18.0.0
+    "@types/react": ^18.0.0
+    "@types/react-dom": ^18.0.0
+    framer-motion: ^6.3.0
+    next: latest
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    typescript: ^4.7.2
+  languageName: unknown
+  linkType: soft
+
 "chalk@npm:^2.0.0":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
@@ -2098,26 +2118,6 @@ next@latest:
   checksum: 5656f4d0bedcf8eb52685c1abdf8fbe73a1603bb1160a24d716e27a57f6cecbe2432ff9c89c2bd57542c3a7b9d14b1882b73bfe2e9d7849c9a4c0b8b39f02b8b
   languageName: node
   linkType: hard
-
-"root-workspace-0b6124@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "root-workspace-0b6124@workspace:."
-  dependencies:
-    "@chakra-ui/icons": ^2.0.2
-    "@chakra-ui/react": ^2.2.1
-    "@chakra-ui/theme-tools": ^2.0.2
-    "@emotion/react": ^11.9.0
-    "@emotion/styled": ^11.9.0
-    "@types/node": ^18.0.0
-    "@types/react": ^18.0.0
-    "@types/react-dom": ^18.0.0
-    framer-motion: ^6.3.0
-    next: latest
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    typescript: ^4.7.2
-  languageName: unknown
-  linkType: soft
 
 "safe-buffer@npm:~5.1.1":
   version: 5.1.2
