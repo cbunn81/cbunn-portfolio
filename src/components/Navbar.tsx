@@ -56,7 +56,6 @@ export const Navbar = () => {
         alignItems={"center"}
         justifyContent={"space-between"}
         w={["95%", "95%", "95%"]}
-        maxW={"container.lg"}
         mx="auto"
       >
         <IconButton
