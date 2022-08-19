@@ -56,6 +56,7 @@ export const Navbar = () => {
         alignItems={"center"}
         justifyContent={"space-between"}
         w={["95%", "95%", "95%"]}
+        maxW={"container.lg"}
         mx="auto"
       >
         <IconButton
@@ -69,7 +70,6 @@ export const Navbar = () => {
           <Flex alignItems={"center"}>cbunn</Flex>
           <HStack as="nav" spacing="4" display={{ base: "none", md: "flex" }}>
             {navItems}
-            <DarkModeSwitch />
           </HStack>
         </HStack>
         <Flex alignItems={"center"}>
