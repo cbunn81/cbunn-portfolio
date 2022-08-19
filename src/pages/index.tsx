@@ -2,7 +2,7 @@ import { Container } from "../components/Container";
 import { Navbar } from "../components/Navbar";
 
 const Index = () => (
-  <Container height="100vh">
+  <Container maxWidth={"container.lg"}>
     <Navbar />
   </Container>
 );
