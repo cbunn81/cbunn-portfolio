@@ -8,7 +8,6 @@ export const DarkModeSwitch = () => {
     <IconButton
       icon={isDark ? <SunIcon /> : <MoonIcon />}
       aria-label="Toggle Theme"
-      colorScheme="green"
       onClick={toggleColorMode}
     />
   );
