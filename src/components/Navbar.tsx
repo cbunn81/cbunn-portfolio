@@ -25,21 +25,21 @@ export const Navbar = () => {
 
   const navItems = (
     <>
-      <NextLink href="/" passHref>
-        <Button as="a" variant="ghost" aria-label="Home" py={5}>
-          Home
+      <NextLink href="/projects" passHref>
+        <Button as="a" variant="ghost" aria-label="Projects" py={5}>
+          Projects
         </Button>
       </NextLink>
 
-      <NextLink href="/about" passHref>
-        <Button as="a" variant="ghost" aria-label="About" py={5}>
-          About
+      <NextLink href="/blog" passHref>
+        <Button as="a" variant="ghost" aria-label="Blog" py={5}>
+          Blog
         </Button>
       </NextLink>
 
-      <NextLink href="/contact" passHref>
-        <Button as="a" variant="ghost" aria-label="Contact" py={5}>
-          Contact
+      <NextLink href="/photos" passHref>
+        <Button as="a" variant="ghost" aria-label="Photos" py={5}>
+          Photos
         </Button>
       </NextLink>
     </>
