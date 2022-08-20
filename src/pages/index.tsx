@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Heading, Text } from "@chakra-ui/react";
 import { Container } from "../components/Container";
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 const Index = () => (
   <>
@@ -21,9 +22,14 @@ const Index = () => (
         content="I'm Christopher Bunn. I'm Web and Software Developer based in Tokushima, Japan."
       />
     </Head>
-    <Container>
+    <Container
+      h="100vh"
+      display={"flex"}
+      flexDirection={"column"}
+      justifyContent="start"
+    >
       <Navbar />
-      <Container maxW={"container.lg"} my={["5", "10"]}>
+      <Container maxW={"container.lg"} my={["5", "10"]} flex="1">
         <Heading>This is a heading</Heading>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
@@ -55,6 +61,7 @@ const Index = () => (
           tempus vestibulum ante vel venenatis. Aliquam at blandit tortor.
         </Text>
       </Container>
+      <Footer />
     </Container>
   </>
 );
