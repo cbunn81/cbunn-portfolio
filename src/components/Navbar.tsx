@@ -63,12 +63,12 @@ export const Navbar = () => {
           size={"md"}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
           aria-label={"Open Menu"}
-          display={["inherit", "inherit", "none"]}
+          display={["inherit", "none", "none"]}
           onClick={isOpen ? onClose : onOpen}
         />
         <HStack spacing={8} alignItems={"center"}>
           <Flex alignItems={"center"}>cbunn</Flex>
-          <HStack as="nav" spacing="4" display={{ base: "none", md: "flex" }}>
+          <HStack as="nav" spacing="4" display={{ base: "none", sm: "flex" }}>
             {navItems}
           </HStack>
         </HStack>
@@ -82,7 +82,7 @@ export const Navbar = () => {
           py={4}
           w={["100%", "100%", "80%"]}
           maxW={"container.lg"}
-          display={["inherit", "inherit", "none"]}
+          display={["inherit", "none", "none"]}
         >
           <Stack as={"nav"} spacing={4}>
             {navItems}
