@@ -4,7 +4,7 @@ import { Navbar } from "../components/Navbar";
 const Index = () => (
   <Container>
     <Navbar />
-    <Container maxW={"container.lg"}>
+    <Container maxW={"container.lg"} my={["5", "10"]}>
       <h1>This is a heading</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis nisi
