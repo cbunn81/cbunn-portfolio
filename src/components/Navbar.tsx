@@ -67,7 +67,11 @@ export const Navbar = () => {
           onClick={isOpen ? onClose : onOpen}
         />
         <HStack spacing={8} alignItems={"center"}>
-          <Flex alignItems={"center"}>cbunn</Flex>
+          <NextLink href="/" passHref>
+            <Button as="a" variant="ghost" aria-label="Home" py={5}>
+              cbunn
+            </Button>
+          </NextLink>
           <HStack as="nav" spacing="4" display={{ base: "none", sm: "flex" }}>
             {navItems}
           </HStack>
