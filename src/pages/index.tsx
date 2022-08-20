@@ -1,7 +1,25 @@
+import Head from "next/head";
 import { Container } from "../components/Container";
 import { Navbar } from "../components/Navbar";
 
 const Index = () => (
+  <>
+    <Head>
+      <title>Christopher Bunn - Home</title>
+      <meta name="author" content="Christopher Bunn" />
+      <meta
+        name="description"
+        content="I'm Christopher Bunn. I'm Web and Software Developer based in Tokushima, Japan."
+      />
+      <meta
+        property="og:title"
+        content="Christopher Bunn - Web and Software Developer"
+      />
+      <meta
+        property="og:description"
+        content="I'm Christopher Bunn. I'm Web and Software Developer based in Tokushima, Japan."
+      />
+    </Head>
   <Container>
     <Navbar />
     <Container maxW={"container.lg"} my={["5", "10"]}>
@@ -37,6 +55,7 @@ const Index = () => (
       </p>
     </Container>
   </Container>
+  </>
 );
 
 export default Index;
