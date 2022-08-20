@@ -1,27 +1,19 @@
-import { useState } from "react";
 import {
   Flex,
   Button,
   IconButton,
   Box,
   useColorModeValue,
-  Spacer,
   HStack,
   Stack,
 } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import { Container } from "./Container";
 import { DarkModeSwitch } from "./DarkModeSwitch";
 
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const [mobileMenuClick, setMobileMenuClick] = useState(false);
-  const handleMobileMenuClick = () => {
-    setMobileMenuClick((current) => !current);
-  };
 
   const navItems = (
     <>
