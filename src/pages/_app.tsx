@@ -1,3 +1,5 @@
+import "@fontsource/inter";
+
 import { ChakraProvider } from "@chakra-ui/react";
 
 import Fonts from "../styles/Fonts";

@@ -1194,6 +1194,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/inter@npm:^4.5.12":
+  version: 4.5.12
+  resolution: "@fontsource/inter@npm:4.5.12"
+  checksum: 7637978d4355f52cf348bbe40a2e1bfa535c290057bef27c022343234b00c07b138c86a2b52260825c1ecc5cc9f59c68fd6ff08311111c70c04f82ace592920b
+  languageName: node
+  linkType: hard
+
 "@motionone/animation@npm:^10.12.0":
   version: 10.13.2
   resolution: "@motionone/animation@npm:10.13.2"
@@ -1503,6 +1510,7 @@ __metadata:
     "@chakra-ui/theme-tools": ^2.0.2
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.9.0
+    "@fontsource/inter": ^4.5.12
     "@types/node": ^18.0.0
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
