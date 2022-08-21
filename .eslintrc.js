@@ -19,7 +19,6 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
     "plugin:promise/recommended",
-    "plugin:unicorn/recommended",
     "prettier", // Prettier must be last
   ],
   overrides: [],
@@ -41,7 +40,6 @@ module.exports = {
     "react-hooks",
     "prettier",
     "promise",
-    "unicorn",
   ],
   rules: {
     "prettier/prettier": "error",
