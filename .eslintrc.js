@@ -2,21 +2,49 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   extends: [
-    'plugin:react/recommended',
-    'standard-with-typescript'
+    "next",
+    "next/core-web-vitals",
+    "google",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:eslint-comments/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:jest/recommended",
+    "plugin:jsk-ally/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:promise/recommended",
+    "plugin:unicorn/recommended",
+    "prettier", // Prettier must be last
   ],
-  overrides: [
-  ],
+  overrides: [],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
   plugins: [
-    'react'
+    "@typescript-eslint",
+    "eslint-comments",
+    "import",
+    "jest",
+    "jsx-ally",
+    "react",
+    "react-hooks",
+    "prettier",
+    "promise",
+    "unicorn",
   ],
   rules: {
-  }
-}
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+  },
+};
