@@ -1935,7 +1935,7 @@ __metadata:
     eslint-config-standard-with-typescript: latest
     eslint-import-resolver-typescript: ^3.4.2
     eslint-plugin-eslint-comments: ^3.2.0
-    eslint-plugin-import: ^2.25.2
+    eslint-plugin-import: ^2.26.0
     eslint-plugin-jest: ^26.8.5
     eslint-plugin-jsx-a11y: ^6.6.1
     eslint-plugin-n: ^15.0.0
@@ -2422,7 +2422,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import@npm:^2.25.2, eslint-plugin-import@npm:^2.26.0":
+"eslint-plugin-import@npm:^2.26.0":
   version: 2.26.0
   resolution: "eslint-plugin-import@npm:2.26.0"
   dependencies:
