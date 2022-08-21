@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import { DarkModeSwitch } from "./DarkModeSwitch";
+import { DarkModeSwitch } from "@components/DarkModeSwitch";
 
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
