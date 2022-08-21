@@ -29,8 +29,17 @@ const Index = () => (
       justifyContent="start"
     >
       <Navbar />
-      <Container maxW={"container.lg"} my={["5", "10"]} flex="1">
-        <Heading>This is a heading</Heading>
+      <Container
+        maxW={"container.lg"}
+        w={"95%"}
+        px={4}
+        py={["2", "4"]}
+        flex="1"
+        alignItems={"start"}
+      >
+        <Heading size={"4xl"} my={[2, 4]}>
+          Hello World!
+        </Heading>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
           nisi sit amet massa lobortis vulputate in eget mauris. Duis egestas
