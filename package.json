@@ -36,6 +36,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "latest",
+    "prettier": "^2.7.1",
     "typescript": "*"
   },
   "packageManager": "yarn@3.2.2"
