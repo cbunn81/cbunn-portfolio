@@ -28,6 +28,7 @@ module.exports = {
       jsx: true,
     },
     ecmaVersion: "latest",
+    project: "./tsconfig.json",
     sourceType: "module",
   },
   plugins: [
@@ -42,10 +43,23 @@ module.exports = {
     "promise",
   ],
   rules: {
+    // turn on errors for missing imports
+    "import/no-unresolved": "error",
     "prettier/prettier": "error",
     "@typescript-eslint/no-unused-vars": "error",
     // suppress errors for missing 'import React' in files
     "react/react-in-jsx-scope": "off",
     "require-jsdoc": "off",
+  },
+  settings: {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
+    "import/resolver": {
+      typescript: {
+        alwaysTryTypes: true,
+        project: "./tsconfig.json",
+      },
+    },
   },
 };
