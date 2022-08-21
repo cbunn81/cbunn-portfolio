@@ -44,5 +44,8 @@ module.exports = {
   rules: {
     "prettier/prettier": "error",
     "@typescript-eslint/no-unused-vars": "error",
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": "off",
+    "require-jsdoc": "off",
   },
 };
