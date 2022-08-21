@@ -1,4 +1,4 @@
-import { Box, IconButton, Link, Stack } from "@chakra-ui/react";
+import { Box, IconButton, Link, Stack, Text } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 
@@ -9,9 +9,12 @@ export const Footer = () => (
     alignItems="center"
     justifyContent="space-between"
     maxW="container.lg"
-    w="100%"
+    w="95%"
+    px="4"
   >
-    <Box>Copyright 2022 - Christopher Bunn</Box>
+    <Box>
+      <Text fontSize={"xs"}>Copyright &copy; 2022 - Christopher Bunn</Text>
+    </Box>
     <Box>
       <IconButton
         aria-label="cbunn81 at GitHub"
