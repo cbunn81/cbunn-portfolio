@@ -39,6 +39,7 @@
     "eslint-config-next": "^12.2.5",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard-with-typescript": "latest",
+    "eslint-import-resolver-typescript": "^3.4.2",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jest": "^26.8.5",
