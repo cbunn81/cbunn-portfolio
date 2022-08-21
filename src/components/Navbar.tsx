@@ -6,8 +6,8 @@ import {
   useColorModeValue,
   HStack,
   Stack,
+  useDisclosure,
 } from "@chakra-ui/react";
-import { useDisclosure } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
 import { DarkModeSwitch } from "./DarkModeSwitch";
