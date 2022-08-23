@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Heading, Text } from "@chakra-ui/react";
-import { Container } from "@components/Container";
+import { Container, Flex, Heading, Text } from "@chakra-ui/react";
 import { Navbar } from "@components/Navbar";
 import { Footer } from "@components/Footer";
 
