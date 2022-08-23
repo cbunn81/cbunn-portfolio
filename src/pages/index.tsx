@@ -21,14 +21,15 @@ const Index = () => (
         content="I'm Christopher Bunn. I'm Web and Software Developer based in Tokushima, Japan."
       />
     </Head>
-    <Container
+    <Flex
       h="100vh"
-      display={"flex"}
       flexDirection={"column"}
       justifyContent="start"
+      alignItems={"center"}
     >
       <Navbar />
       <Container
+        as="main"
         maxW={"container.lg"}
         w={"95%"}
         px={4}
@@ -70,7 +71,7 @@ const Index = () => (
         </Text>
       </Container>
       <Footer />
-    </Container>
+    </Flex>
   </>
 );
 
