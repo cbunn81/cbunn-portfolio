@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
 import { Navbar } from "@components/Navbar";
 import { Footer } from "@components/Footer";
 
@@ -46,6 +46,20 @@ const Index = () => (
           Please have a look at some of my recent projects, and feel free to
           contact me.
         </Text>
+        <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
+          <Box border="2px solid green" flex="1 0 40%">
+            Project 1
+          </Box>
+          <Box border="2px solid green" flex="1 0 40%">
+            Project 1
+          </Box>
+          <Box border="2px solid green" flex="1 0 40%">
+            Project 1
+          </Box>
+          <Box border="2px solid green" flex="1 0 40%">
+            Project 1
+          </Box>
+        </Flex>
       </Container>
       <Footer />
     </Flex>
