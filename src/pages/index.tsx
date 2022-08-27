@@ -47,16 +47,21 @@ const Index = () => (
           contact me.
         </Text>
         <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
-          <Box border="2px solid green" flex="1 0 40%">
+          <Box
+            border="2px solid green"
+            borderRadius={10}
+            h="10em"
+            flex="1 0 40%"
+          >
             Project 1
           </Box>
-          <Box border="2px solid green" flex="1 0 40%">
+          <Box border="2px solid green" h="10em" flex="1 0 40%">
             Project 1
           </Box>
-          <Box border="2px solid green" flex="1 0 40%">
+          <Box border="2px solid green" h="10em" flex="1 0 40%">
             Project 1
           </Box>
-          <Box border="2px solid green" flex="1 0 40%">
+          <Box border="2px solid green" h="10em" flex="1 0 40%">
             Project 1
           </Box>
         </Flex>
