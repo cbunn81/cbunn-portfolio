@@ -1,5 +1,16 @@
 import Head from "next/head";
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  HStack,
+  Link,
+  Tag,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import NextLink from "next/link";
 import { Navbar } from "@components/Navbar";
 import { Footer } from "@components/Footer";
 
@@ -46,14 +57,32 @@ const Index = () => (
           Please have a look at some of my recent projects, and feel free to
           contact me.
         </Text>
+        <Heading size={"xl"} my={[2, 4]}>
+          Featured Projects:
+        </Heading>
         <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
           <Box
-            border="2px solid green"
-            borderRadius={10}
+            borderWidth="2px"
+            borderColor={useColorModeValue("gray.300", "gray.700")}
+            _hover={{ borderColor: "blue.500" }}
+            borderRadius="xl"
             h="10em"
             flex="1 0 40%"
+            px={[2, 4]}
+            py={2}
           >
-            Project 1
+            <Heading size={["sm", "md"]}>ECATS Test</Heading>
+            <HStack>
+              <Tag size={["sm", "md"]}>Python</Tag>
+              <Tag size={["sm", "md"]}>Django</Tag>
+              <Tag size={["sm", "md"]}>JavaScript</Tag>
+              <Tag size={["sm", "md"]}>React</Tag>
+              <Tag size={["sm", "md"]}>Docker</Tag>
+            </HStack>
+            <Text>
+              A full-stack, multiple-choice test app made to evaluate the
+              English level of Japanese EFL/ESL students.
+            </Text>
           </Box>
           <Box border="2px solid green" h="10em" flex="1 0 40%">
             Project 1
@@ -64,6 +93,11 @@ const Index = () => (
           <Box border="2px solid green" h="10em" flex="1 0 40%">
             Project 1
           </Box>
+        </Flex>
+        <Flex justifyContent="end">
+          <NextLink href="/projects" passHref>
+            <Link fontStyle="italic">See all projects</Link>
+          </NextLink>
         </Flex>
       </Container>
       <Footer />
