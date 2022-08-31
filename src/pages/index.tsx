@@ -9,6 +9,7 @@ import {
   Tag,
   Text,
   useColorModeValue,
+  VStack,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { Navbar } from "@components/Navbar";
@@ -72,23 +73,25 @@ const Index = () => (
             px={[2, 4]}
             py={2}
           >
-            <Heading size={["sm", "md"]}>ECATS Test</Heading>
-            <HStack>
-              <Tag
-                bgColor={useColorModeValue("gray.400", "")}
-                size={["sm", "md"]}
-              >
-                Python
-              </Tag>
-              <Tag size={["sm", "md"]}>Django</Tag>
-              <Tag size={["sm", "md"]}>JavaScript</Tag>
-              <Tag size={["sm", "md"]}>React</Tag>
-              <Tag size={["sm", "md"]}>Docker</Tag>
-            </HStack>
-            <Text>
-              A full-stack, multiple-choice test app made to evaluate the
-              English level of Japanese EFL/ESL students.
-            </Text>
+            <VStack alignItems="start" justifyContent="start" spacing={2}>
+              <Heading size={["sm", "md"]}>ECATS Test</Heading>
+              <HStack>
+                <Tag
+                  bgColor={useColorModeValue("gray.400", "")}
+                  size={["sm", "md"]}
+                >
+                  Python
+                </Tag>
+                <Tag size={["sm", "md"]}>Django</Tag>
+                <Tag size={["sm", "md"]}>JavaScript</Tag>
+                <Tag size={["sm", "md"]}>React</Tag>
+                <Tag size={["sm", "md"]}>Docker</Tag>
+              </HStack>
+              <Text>
+                A full-stack, multiple-choice test app made to evaluate the
+                English level of Japanese EFL/ESL students.
+              </Text>
+            </VStack>
           </Box>
           <Box border="2px solid green" h="10em" flex="1 0 40%">
             Project 1
