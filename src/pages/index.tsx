@@ -74,7 +74,12 @@ const Index = () => (
           >
             <Heading size={["sm", "md"]}>ECATS Test</Heading>
             <HStack>
-              <Tag size={["sm", "md"]}>Python</Tag>
+              <Tag
+                bgColor={useColorModeValue("gray.400", "")}
+                size={["sm", "md"]}
+              >
+                Python
+              </Tag>
               <Tag size={["sm", "md"]}>Django</Tag>
               <Tag size={["sm", "md"]}>JavaScript</Tag>
               <Tag size={["sm", "md"]}>React</Tag>
