@@ -62,6 +62,7 @@ const Index = () => (
         </Heading>
         <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
           <Box
+            bgColor={useColorModeValue("gray.100", "gray.900")}
             borderWidth="2px"
             borderColor={useColorModeValue("gray.300", "gray.700")}
             _hover={{ borderColor: "blue.500" }}
