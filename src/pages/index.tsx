@@ -6,6 +6,8 @@ import {
   Heading,
   HStack,
   Link,
+  LinkBox,
+  LinkOverlay,
   Tag,
   Text,
   useColorModeValue,
@@ -62,7 +64,7 @@ const Index = () => (
           Featured Projects:
         </Heading>
         <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
-          <Box
+          <LinkBox
             bgColor={useColorModeValue("gray.100", "gray.900")}
             borderWidth="2px"
             borderColor={useColorModeValue("gray.300", "gray.700")}
@@ -74,7 +76,9 @@ const Index = () => (
             py={2}
           >
             <VStack alignItems="start" justifyContent="start" spacing={2}>
-              <Heading size={["sm", "md"]}>ECATS Test</Heading>
+              <LinkOverlay href="/projects/#ecats">
+                <Heading size={["sm", "md"]}>ECATS Test</Heading>
+              </LinkOverlay>
               <HStack>
                 <Tag
                   bgColor={useColorModeValue("gray.400", "")}
@@ -92,7 +96,7 @@ const Index = () => (
                 English level of Japanese EFL/ESL students.
               </Text>
             </VStack>
-          </Box>
+          </LinkBox>
           <Box border="2px solid green" h="10em" flex="1 0 40%">
             Project 1
           </Box>
