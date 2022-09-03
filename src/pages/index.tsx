@@ -133,10 +133,7 @@ const Index = () => (
                   gap="0.5em"
                 >
                   {project.technologies.map((technology) => (
-                    <Tag
-                      bgColor={useColorModeValue("gray.400", "")}
-                      size={["sm", "sm"]}
-                    >
+                    <Tag bgColor={useColorModeValue("gray.400", "")} size="sm">
                       {technology}
                     </Tag>
                   ))}
