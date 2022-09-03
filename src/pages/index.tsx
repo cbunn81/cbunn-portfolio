@@ -117,7 +117,6 @@ const Index = () => (
               borderColor={useColorModeValue("gray.300", "gray.700")}
               _hover={{ borderColor: "blue.500" }}
               borderRadius="xl"
-              h="10em"
               flex="1 0 40%"
               px={[2, 4]}
               py={2}
