@@ -126,7 +126,13 @@ const Index = () => (
                 <LinkOverlay href={project.localURL}>
                   <Heading size={["sm", "md"]}>{project.title}</Heading>
                 </LinkOverlay>
-                <HStack>
+                <HStack
+                  wrap="wrap"
+                  // spacing causes wrapped rows to indent because it adds padding and margins
+                  spacing={0}
+                  // use gap instead, which only adds padding
+                  gap="0.5em"
+                >
                   {project.technologies.map((technology) => (
                     <Tag
                       bgColor={useColorModeValue("gray.400", "")}
