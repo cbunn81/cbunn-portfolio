@@ -93,62 +93,69 @@ const Index = () => (
         maxW={"container.lg"}
         w={"95%"}
         px={4}
-        py={["2", "4"]}
+        py={[2, 4]}
         flex="1"
         alignItems={"start"}
       >
-        <Heading size={"4xl"} my={[2, 4]}>
-          Hello World!
-        </Heading>
-        <Text fontSize="xl">
-          My name is Chris, and I'm a software developer. I'm originally from
-          Philadelphia in the US, but I'm currently living in Tokushima, Japan.
-          Please have a look at some of my recent projects, and feel free to
-          contact me.
-        </Text>
-        <Heading size={"xl"} my={[2, 4]}>
-          Featured Projects:
-        </Heading>
-        <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
-          {projects.map((project) => (
-            <LinkBox
-              bgColor={useColorModeValue("gray.100", "gray.900")}
-              borderWidth="2px"
-              borderColor={useColorModeValue("gray.300", "gray.700")}
-              _hover={{ borderColor: "blue.500" }}
-              borderRadius="xl"
-              boxShadow="lg"
-              flex="1 0 40%"
-              px={[2, 4]}
-              py={2}
-            >
-              <VStack alignItems="start" justifyContent="start" spacing={2}>
-                <LinkOverlay href={project.localURL}>
-                  <Heading size={["sm", "md"]}>{project.title}</Heading>
-                </LinkOverlay>
-                <HStack
-                  wrap="wrap"
-                  // spacing causes wrapped rows to indent because it adds padding and margins
-                  spacing={0}
-                  // use gap instead, which only adds padding
-                  gap="0.5em"
-                >
-                  {project.technologies.map((technology) => (
-                    <Tag bgColor={useColorModeValue("gray.400", "")} size="sm">
-                      {technology}
-                    </Tag>
-                  ))}
-                </HStack>
-                <Text>{project.description}</Text>
-              </VStack>
-            </LinkBox>
-          ))}
-        </Flex>
-        <Flex justifyContent="end">
-          <NextLink href="/projects" passHref>
-            <Link fontStyle="italic">See all projects</Link>
-          </NextLink>
-        </Flex>
+        <Box as="section" my={[4, 8]}>
+          <Heading size={["3xl", "4xl"]} my={[6, 12]}>
+            Hello World!
+          </Heading>
+          <Text fontSize="xl">
+            My name is Chris, and I'm a software developer. I'm originally from
+            Philadelphia in the US, but I'm currently living in Tokushima,
+            Japan. Please have a look at some of my recent projects, and feel
+            free to contact me.
+          </Text>
+        </Box>
+        <Box as="section" my={[10, 20]}>
+          <Heading size={"xl"} my={[4, 8]}>
+            Featured Projects:
+          </Heading>
+          <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
+            {projects.map((project) => (
+              <LinkBox
+                bgColor={useColorModeValue("gray.100", "gray.900")}
+                borderWidth="2px"
+                borderColor={useColorModeValue("gray.300", "gray.700")}
+                _hover={{ borderColor: "blue.500" }}
+                borderRadius="xl"
+                boxShadow="lg"
+                flex="1 0 40%"
+                px={[2, 4]}
+                py={2}
+              >
+                <VStack alignItems="start" justifyContent="start" spacing={2}>
+                  <LinkOverlay href={project.localURL}>
+                    <Heading size={["sm", "md"]}>{project.title}</Heading>
+                  </LinkOverlay>
+                  <HStack
+                    wrap="wrap"
+                    // spacing causes wrapped rows to indent because it adds padding and margins
+                    spacing={0}
+                    // use gap instead, which only adds padding
+                    gap="0.5em"
+                  >
+                    {project.technologies.map((technology) => (
+                      <Tag
+                        bgColor={useColorModeValue("gray.400", "")}
+                        size="sm"
+                      >
+                        {technology}
+                      </Tag>
+                    ))}
+                  </HStack>
+                  <Text>{project.description}</Text>
+                </VStack>
+              </LinkBox>
+            ))}
+          </Flex>
+          <Flex justifyContent="end" my={[4, 6]}>
+            <NextLink href="/projects" passHref>
+              <Link fontStyle="italic">See all projects</Link>
+            </NextLink>
+          </Flex>
+        </Box>
       </Container>
       <Footer />
     </Flex>
