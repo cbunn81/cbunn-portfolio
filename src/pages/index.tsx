@@ -10,7 +10,6 @@ import {
   LinkOverlay,
   Tag,
   Text,
-  useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
@@ -71,9 +70,10 @@ const Index = () => (
             {projects.map((project) => (
               <LinkBox
                 key={project.id}
-                bgColor={useColorModeValue("gray.100", "gray.900")}
+                bgColor="gray.100"
                 borderWidth="2px"
-                borderColor={useColorModeValue("gray.300", "gray.700")}
+                borderColor="gray.300"
+                _dark={{ bgColor: "gray.900", borderColor: "gray.700" }}
                 _hover={{ borderColor: "blue.500" }}
                 borderRadius="xl"
                 boxShadow="lg"
@@ -95,7 +95,7 @@ const Index = () => (
                     {project.technologies.map((technology) => (
                       <Tag
                         key={technology}
-                        bgColor={useColorModeValue("gray.400", "")}
+                        _light={{ bgColor: "gray.400" }}
                         size="sm"
                       >
                         {technology}
