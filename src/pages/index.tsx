@@ -70,6 +70,7 @@ const Index = () => (
           <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
             {projects.map((project) => (
               <LinkBox
+                key={project.id}
                 bgColor={useColorModeValue("gray.100", "gray.900")}
                 borderWidth="2px"
                 borderColor={useColorModeValue("gray.300", "gray.700")}
@@ -93,6 +94,7 @@ const Index = () => (
                   >
                     {project.technologies.map((technology) => (
                       <Tag
+                        key={technology}
                         bgColor={useColorModeValue("gray.400", "")}
                         size="sm"
                       >
