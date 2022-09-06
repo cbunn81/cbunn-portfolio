@@ -59,7 +59,11 @@ const Index = () => (
             My name is Chris, and I'm a software developer. I'm originally from
             Philadelphia in the US, but I'm currently living in Tokushima,
             Japan. Please have a look at some of my recent projects, and feel
-            free to contact me.
+            free to{" "}
+            <Link href="mailto:cbunn@cbunn.com" textDecoration="underline 1px">
+              contact me
+            </Link>
+            .
           </Text>
         </Box>
         <Box as="section" my={[10, 20]}>
