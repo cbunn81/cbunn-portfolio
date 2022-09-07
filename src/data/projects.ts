@@ -1,6 +1,7 @@
 export const projects = [
   {
     id: 1,
+    featured: true,
     title: "ECATS Test",
     localURL: "/projects#",
     githubURL: "https://github.com/globallabo/ecats-test",
@@ -17,6 +18,7 @@ export const projects = [
   },
   {
     id: 2,
+    featured: true,
     title: "Elite curriculum generator",
     localURL: "/projects#",
     githubURL: "https://github.com/globallabo/elite",
@@ -26,6 +28,7 @@ export const projects = [
   },
   {
     id: 3,
+    featured: true,
     title: "Eikenvocab flashcard generator",
     localURL: "/projects#",
     githubURL: "https://github.com/globallabo/eikenvocab",
@@ -35,6 +38,7 @@ export const projects = [
   },
   {
     id: 4,
+    featured: true,
     title: "checkr",
     localURL: "/projects#",
     githubURL: "https://github.com/cbunn81/checkr",
