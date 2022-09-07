@@ -1,10 +1,8 @@
 import Head from "next/head";
 import { Box, Container, Flex, Heading, Link, Text } from "@chakra-ui/react";
-import NextLink from "next/link";
 import { Navbar } from "@components/Navbar";
-import { FeaturedProjectCard } from "@components/FeaturedProjectCard";
+import { FeaturedProjects } from "@components/FeaturedProjects";
 import { Footer } from "@components/Footer";
-import { projects } from "@data/projects";
 
 const Index = () => (
   <>
@@ -61,21 +59,7 @@ const Index = () => (
             .
           </Text>
         </Box>
-        <Box as="section" my={[10, 20]}>
-          <Heading size={"xl"} my={[4, 8]}>
-            Featured Projects:
-          </Heading>
-          <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
-            {projects.map((project) => (
-              <FeaturedProjectCard {...project} />
-            ))}
-          </Flex>
-          <Flex justifyContent="end" my={[4, 6]}>
-            <NextLink href="/projects" passHref>
-              <Link fontStyle="italic">See all projects</Link>
-            </NextLink>
-          </Flex>
-        </Box>
+        <FeaturedProjects />
       </Container>
       <Footer />
     </Flex>
