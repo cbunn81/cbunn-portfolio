@@ -84,7 +84,8 @@ const Index = () => (
                 borderWidth="2px"
                 borderColor="gray.300"
                 _dark={{ bgColor: "gray.900", borderColor: "gray.700" }}
-                _hover={{ borderColor: "blue.500" }}
+                // _hover needs an important flag to override the more specific definition under _dark
+                _hover={{ borderColor: "blue.500 !important" }}
                 borderRadius="xl"
                 boxShadow="lg"
                 flex="1 0 40%"
