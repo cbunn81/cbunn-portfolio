@@ -105,7 +105,7 @@ const Index = () => (
                     {project.technologies.map((technology) => (
                       <Tag
                         key={technology}
-                        _light={{ bgColor: "gray.400" }}
+                        _light={{ bgColor: "gray.300" }}
                         size="sm"
                       >
                         {technology}
