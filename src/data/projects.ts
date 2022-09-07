@@ -19,7 +19,7 @@ export const projects = [
   {
     id: 2,
     featured: true,
-    title: "Elite curriculum generator",
+    title: "Elite Curriculum Generator",
     localURL: "/projects#",
     githubURL: "https://github.com/globallabo/elite",
     description:
@@ -29,7 +29,7 @@ export const projects = [
   {
     id: 3,
     featured: true,
-    title: "Eikenvocab flashcard generator",
+    title: "Eikenvocab Flashcard Generator",
     localURL: "/projects#",
     githubURL: "https://github.com/globallabo/eikenvocab",
     description:
