@@ -80,9 +80,8 @@ const Index = () => (
             {projects.map((project) => (
               <LinkBox
                 key={project.id}
-                bgColor="gray.100"
                 borderWidth="2px"
-                borderColor="gray.300"
+                _light={{ bgColor: "gray.50", borderColor: "gray.300" }}
                 _dark={{ bgColor: "gray.900", borderColor: "gray.700" }}
                 // _hover needs an important flag to override the more specific definition under _dark
                 _hover={{ borderColor: "blue.500 !important" }}
