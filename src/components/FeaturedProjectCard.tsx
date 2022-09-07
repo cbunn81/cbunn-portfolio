@@ -34,9 +34,11 @@ export const FeaturedProjectCard = (project: Project) => (
     py={2}
   >
     <VStack alignItems="start" justifyContent="start" spacing={2}>
-      <LinkOverlay href={project.localURL}>
-        <Heading size={["sm", "md"]}>{project.title}</Heading>
-      </LinkOverlay>
+      <NextLink href={project.localURL} passHref>
+        <LinkOverlay>
+          <Heading size={["sm", "md"]}>{project.title}</Heading>
+        </LinkOverlay>
+      </NextLink>
       <HStack
         wrap="wrap"
         // spacing causes wrapped rows to indent because it adds padding and margins
