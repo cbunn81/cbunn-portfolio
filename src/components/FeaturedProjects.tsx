@@ -9,8 +9,8 @@ export const FeaturedProjects = () => (
       Featured Projects:
     </Heading>
     <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
-      {projects.map((project, index) => (
-        <FeaturedProjectCard key={index} {...project} />
+      {projects.map((project) => (
+        <FeaturedProjectCard key={project.id.toString()} {...project} />
       ))}
     </Flex>
     <Flex justifyContent="end" my={[4, 6]}>
