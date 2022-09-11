@@ -53,6 +53,36 @@ const Projects = () => (
             Projects!
           </Heading>
         </Box>
+        {projects.map((project) => (
+          <Box
+            id={project.id.toString()}
+            key={project.id.toString()}
+            as="section"
+            my={[10, 20]}
+          >
+            <Heading size={"xl"} my={[2, 4]}>
+              {project.title}
+            </Heading>
+            <HStack
+              wrap="wrap"
+              // spacing causes wrapped rows to indent because it adds padding and margins
+              spacing={0}
+              // use gap instead, which only adds padding
+              gap="0.5em"
+            >
+              {project.technologies.map((technology) => (
+                <Tag
+                  key={technology}
+                  _light={{ bgColor: "gray.300" }}
+                  size="sm"
+                >
+                  {technology}
+                </Tag>
+              ))}
+            </HStack>
+            <Text>{project.description}</Text>
+          </Box>
+        ))}
       </Container>
       <Footer />
     </Flex>
