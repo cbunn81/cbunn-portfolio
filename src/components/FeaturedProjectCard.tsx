@@ -13,7 +13,6 @@ type Project = {
   id: number;
   featured: boolean;
   title: string;
-  localURL: string;
   githubURL: string;
   description: string;
   technologies: string[];
@@ -34,7 +33,7 @@ export const FeaturedProjectCard = (project: Project) => (
     py={2}
   >
     <VStack alignItems="start" justifyContent="start" spacing={2}>
-      <NextLink href={project.localURL} passHref>
+      <NextLink href={`/projects#${project.id}`} passHref>
         <LinkOverlay>
           <Heading size={["sm", "md"]}>{project.title}</Heading>
         </LinkOverlay>
