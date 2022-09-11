@@ -5,14 +5,9 @@ import {
   Flex,
   Heading,
   HStack,
-  Link,
-  LinkBox,
-  LinkOverlay,
   Tag,
   Text,
-  VStack,
 } from "@chakra-ui/react";
-import NextLink from "next/link";
 import { Navbar } from "@components/Navbar";
 import { Footer } from "@components/Footer";
 import { projects } from "@data/projects";
