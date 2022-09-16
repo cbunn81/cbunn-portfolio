@@ -5,6 +5,8 @@ import {
   Flex,
   Heading,
   HStack,
+  Image,
+  Stack,
   Tag,
   Text,
 } from "@chakra-ui/react";
@@ -49,34 +51,44 @@ const Projects = () => (
           </Heading>
         </Box>
         {projects.map((project) => (
-          <Box
+          <Stack
             id={project.id.toString()}
             key={project.id.toString()}
             as="section"
             my={[10, 20]}
+            direction={["column", "row"]}
+            _odd={{ flexDirection: { sm: "row-reverse" } }}
           >
-            <Heading size={"xl"} my={[2, 4]}>
-              {project.title}
-            </Heading>
-            <HStack
-              wrap="wrap"
-              // spacing causes wrapped rows to indent because it adds padding and margins
-              spacing={0}
-              // use gap instead, which only adds padding
-              gap="0.5em"
-            >
-              {project.technologies.map((technology) => (
-                <Tag
-                  key={technology}
-                  _light={{ bgColor: "gray.300" }}
-                  size="sm"
-                >
-                  {technology}
-                </Tag>
-              ))}
-            </HStack>
-            <Text>{project.description}</Text>
-          </Box>
+            <Image
+              w={["100vw", "200px"]}
+              h={["100vw", "200px"]}
+              src={`/images/${project.image}`}
+              alt={project.title}
+            />
+            <Box>
+              <Heading size={"xl"} my={[2, 4]}>
+                {project.title}
+              </Heading>
+              <HStack
+                wrap="wrap"
+                // spacing causes wrapped rows to indent because it adds padding and margins
+                spacing={0}
+                // use gap instead, which only adds padding
+                gap="0.5em"
+              >
+                {project.technologies.map((technology) => (
+                  <Tag
+                    key={technology}
+                    _light={{ bgColor: "gray.300" }}
+                    size="sm"
+                  >
+                    {technology}
+                  </Tag>
+                ))}
+              </HStack>
+              <Text>{project.description}</Text>
+            </Box>
+          </Stack>
         ))}
       </Container>
       <Footer />
