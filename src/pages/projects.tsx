@@ -58,6 +58,8 @@ const Projects = () => (
             my={[10, 20]}
             direction={["column", "row"]}
             _odd={{ flexDirection: { sm: "row-reverse" } }}
+            justifyContent="space-between"
+            gap={[0, 8]}
           >
             <Image
               w={["100vw", "200px"]}
