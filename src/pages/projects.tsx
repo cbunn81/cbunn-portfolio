@@ -88,7 +88,7 @@ const Projects = () => (
                   </Tag>
                 ))}
               </HStack>
-              <Text>{project.description}</Text>
+              <Text>{project.longDescription}</Text>
             </Box>
           </Stack>
         ))}
