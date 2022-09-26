@@ -4,7 +4,7 @@ export const projects = [
     featured: true,
     title: "ECATS Test",
     githubURL: "https://github.com/globallabo/ecats-test",
-    image: "placeholder.jpg",
+    image: "ecats.png",
     description:
       "A full-stack, multiple-choice test app made to evaluate the English level of Japanese EFL/ESL students.",
     longDescription:
@@ -23,7 +23,7 @@ export const projects = [
     featured: true,
     title: "Elite Curriculum Generator",
     githubURL: "https://github.com/globallabo/elite",
-    image: "placeholder.jpg",
+    image: "elite.png",
     description:
       "A project to easily generate a full set of PDFs for a business English curriculum with a standard template and content pulled from Google Sheets.",
     longDescription:
@@ -35,7 +35,7 @@ export const projects = [
     featured: true,
     title: "Eikenvocab Flashcard Generator",
     githubURL: "https://github.com/globallabo/eikenvocab",
-    image: "placeholder.jpg",
+    image: "eikenvocab.png",
     description:
       "A project to automatically produce a set of vocabulary flashcards for students studying to take standardized English exams.",
     longDescription:
@@ -47,7 +47,7 @@ export const projects = [
     featured: true,
     title: "checkr",
     githubURL: "https://github.com/cbunn81/checkr",
-    image: "placeholder.jpg",
+    image: "checkr.gif",
     description:
       "A command-line tool that scans files and records their cryptographic hashes, and later re-scans them and verifies the hashes to ensure data integrity.",
     longDescription:
