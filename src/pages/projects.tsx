@@ -66,6 +66,7 @@ const Projects = () => (
               w={["100vw", "295px"]}
               h={["100vw", "200px"]}
               alignSelf="center"
+              boxShadow="dark-lg"
               src={`/images/${project.image}`}
               alt={project.title}
             />
