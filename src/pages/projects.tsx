@@ -62,8 +62,10 @@ const Projects = () => (
             gap={[0, 8]}
           >
             <Image
-              w={["100vw", "200px"]}
+              // Aspect ratio is 1.475
+              w={["100vw", "295px"]}
               h={["100vw", "200px"]}
+              alignSelf="center"
               src={`/images/${project.image}`}
               alt={project.title}
             />
