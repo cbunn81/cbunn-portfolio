@@ -92,7 +92,7 @@ const Projects = () => (
                   </Tag>
                 ))}
               </HStack>
-              <Text>{project.longDescription}</Text>
+              <Text my={[2, 4]}>{project.longDescription}</Text>
             </Box>
           </Stack>
         ))}
