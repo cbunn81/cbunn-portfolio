@@ -64,7 +64,7 @@ const Projects = () => (
             <Image
               // Aspect ratio is 1.475
               w={["100vw", "295px"]}
-              h={["100vw", "200px"]}
+              h={["68vw", "200px"]}
               alignSelf="center"
               boxShadow="dark-lg"
               src={`/images/${project.image}`}
