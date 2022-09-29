@@ -65,6 +65,7 @@ const Projects = () => (
               // Aspect ratio is 1.475
               w={["100vw", "clamp(200px, 40vw, 450px)"]}
               h={["68vw", "clamp(136px, 27vw, 305px)"]}
+              my={[6, 0]}
               alignSelf="center"
               boxShadow="dark-lg"
               src={`/images/${project.image}`}
