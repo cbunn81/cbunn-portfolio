@@ -118,10 +118,10 @@ export default function Projects({ projects }) {
 
 export async function getStaticProps() {
   const projects = await Promise.all(
-    projectFilePaths.map((filePath) => {
+    projectFilePaths.map(async (filePath) => {
       const source = fs.readFileSync(path.join(PROJECTS_PATH, filePath));
       const { content, data } = matter(source);
-      const mdxSource = serialize(content, {
+      const mdxSource = await serialize(content, {
         mdxOptions: {
           remarkPlugins: [],
           rehypePlugins: [],
