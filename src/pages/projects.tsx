@@ -116,24 +116,26 @@ export default function Projects({ projects }) {
   );
 }
 
-export function getStaticProps() {
-  const projects = projectFilePaths.map(async (filePath) => {
-    const source = fs.readFileSync(path.join(PROJECTS_PATH, filePath));
-    const { content, data } = matter(source);
-    const mdxSource = await serialize(content, {
-      mdxOptions: {
-        remarkPlugins: [],
-        rehypePlugins: [],
-      },
-      scope: data,
-    });
+export async function getStaticProps() {
+  const projects = await Promise.all(
+    projectFilePaths.map((filePath) => {
+      const source = fs.readFileSync(path.join(PROJECTS_PATH, filePath));
+      const { content, data } = matter(source);
+      const mdxSource = serialize(content, {
+        mdxOptions: {
+          remarkPlugins: [],
+          rehypePlugins: [],
+        },
+        scope: data,
+      });
 
-    return {
-      mdxSource,
-      data,
-      filePath,
-    };
-  });
+      return {
+        mdxSource,
+        data,
+        filePath,
+      };
+    })
+  );
 
   return { props: { projects } };
 }
