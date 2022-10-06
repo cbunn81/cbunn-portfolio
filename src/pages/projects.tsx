@@ -3,9 +3,9 @@ import path from "path";
 
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
-import { Box, Heading } from "@chakra-ui/react";
 
 import Section from "@components/Section";
+import TitleHeading from "@components/TitleHeading";
 import { Project } from "@components/Project";
 import { projectFilePaths, PROJECTS_PATH } from "utils/mdxUtils";
 
@@ -13,9 +13,7 @@ export default function Projects({ projects }) {
   return (
     <>
       <Section>
-        <Heading size={["3xl", "4xl"]} my={[6, 12]}>
-          Projects!
-        </Heading>
+        <TitleHeading>Projects!</TitleHeading>
       </Section>
       {projects.map((project) => (
         <Project key={project.data.id} {...project} />

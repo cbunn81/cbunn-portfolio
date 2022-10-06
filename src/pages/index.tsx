@@ -1,14 +1,13 @@
-import { Box, Heading, Link, Text } from "@chakra-ui/react";
+import { Link, Text } from "@chakra-ui/react";
 
 import { FeaturedProjects } from "@components/FeaturedProjects";
 import Section from "@components/Section";
+import TitleHeading from "@components/TitleHeading";
 
 const Index = () => (
   <>
     <Section>
-      <Heading size={["3xl", "4xl"]} my={[6, 12]}>
-        Hello World!
-      </Heading>
+      <TitleHeading>Hello World!</TitleHeading>
       <Text fontSize="xl">
         My name is Chris, and I'm a software developer. I'm originally from
         Philadelphia in the US, but I'm currently living in Tokushima, Japan.
