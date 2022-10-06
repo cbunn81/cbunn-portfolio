@@ -7,7 +7,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import Section from "@components/Section";
 import TitleHeading from "@components/TitleHeading";
 import { Project } from "@components/Project";
-import { projectFilePaths, PROJECTS_PATH } from "utils/mdxUtils";
+import { projectFilePaths, PROJECTS_PATH } from "@utils/mdxUtils";
 
 export default function Projects({ projects }) {
   return (
