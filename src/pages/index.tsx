@@ -1,9 +1,11 @@
 import { Box, Heading, Link, Text } from "@chakra-ui/react";
+
 import { FeaturedProjects } from "@components/FeaturedProjects";
+import Section from "@components/Section";
 
 const Index = () => (
   <>
-    <Box as="section" my={[4, 8]}>
+    <Section>
       <Heading size={["3xl", "4xl"]} my={[6, 12]}>
         Hello World!
       </Heading>
@@ -23,7 +25,7 @@ const Index = () => (
         </Link>
         .
       </Text>
-    </Box>
+    </Section>
     <FeaturedProjects />
   </>
 );

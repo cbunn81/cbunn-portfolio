@@ -1,10 +1,12 @@
 import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
+
+import Section from "@components/Section";
 import { FeaturedProjectCard } from "@components/FeaturedProjectCard";
 import { projects } from "@data/projects";
 
 export const FeaturedProjects = () => (
-  <Box as="section" my={[10, 20]}>
+  <Section>
     <Heading size={"xl"} my={[4, 8]}>
       Featured Projects:
     </Heading>
@@ -18,5 +20,5 @@ export const FeaturedProjects = () => (
         <Link fontStyle="italic">See all projects</Link>
       </NextLink>
     </Flex>
-  </Box>
+  </Section>
 );
