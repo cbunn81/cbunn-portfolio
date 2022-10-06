@@ -1,3 +1,5 @@
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
+
 import {
   Heading,
   HStack,
@@ -10,17 +12,21 @@ import {
 import NextLink from "next/link";
 
 type Project = {
-  id: number;
-  featured: boolean;
-  title: string;
-  githubURL: string;
-  description: string;
-  technologies: string[];
+  data: {
+    id: number;
+    featured: boolean;
+    title: string;
+    githubURL: string;
+    image: string;
+    description: string;
+    technologies: string[];
+  };
+  mdxSource: MDXRemoteSerializeResult;
 };
 
 export const FeaturedProjectCard = (project: Project) => (
   <LinkBox
-    key={project.id}
+    key={project.data.id}
     borderWidth="2px"
     _light={{ bgColor: "gray.50", borderColor: "gray.300" }}
     _dark={{ bgColor: "gray.900", borderColor: "gray.700" }}
@@ -33,9 +39,9 @@ export const FeaturedProjectCard = (project: Project) => (
     py={2}
   >
     <VStack alignItems="start" justifyContent="start" spacing={2}>
-      <NextLink href={`/projects#${project.id}`} passHref>
+      <NextLink href={`/projects#${project.data.id}`} passHref>
         <LinkOverlay>
-          <Heading size={["sm", "md"]}>{project.title}</Heading>
+          <Heading size={["sm", "md"]}>{project.data.title}</Heading>
         </LinkOverlay>
       </NextLink>
       <HStack
@@ -45,13 +51,13 @@ export const FeaturedProjectCard = (project: Project) => (
         // use gap instead, which only adds padding
         gap="0.5em"
       >
-        {project.technologies.map((technology) => (
+        {project.data.technologies.map((technology) => (
           <Tag key={technology} _light={{ bgColor: "gray.300" }} size="sm">
             {technology}
           </Tag>
         ))}
       </HStack>
-      <Text>{project.description}</Text>
+      <Text>{project.data.description}</Text>
     </VStack>
   </LinkBox>
 );
