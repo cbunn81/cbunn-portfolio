@@ -43,5 +43,7 @@ export async function getStaticProps() {
     })
   );
 
+  // Sort projects by ID before returning
+  projects.sort((a, b) => Number(a.data.id) - Number(b.data.id));
   return { props: { projects } };
 }
