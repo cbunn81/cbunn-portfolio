@@ -1,15 +1,14 @@
-import { Box, Flex, Heading, Link } from "@chakra-ui/react";
+import { Flex, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 
 import Section from "@components/Section";
+import SectionHeading from "@components/SectionHeading";
 import { FeaturedProjectCard } from "@components/FeaturedProjectCard";
 import { projects } from "@data/projects";
 
 export const FeaturedProjects = () => (
   <Section>
-    <Heading size={"xl"} my={[4, 8]}>
-      Featured Projects:
-    </Heading>
+    <SectionHeading>Featured Projects:</SectionHeading>
     <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
       {projects.map((project) => (
         <FeaturedProjectCard key={project.id.toString()} {...project} />

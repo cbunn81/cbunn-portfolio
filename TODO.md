@@ -16,9 +16,9 @@ Project Description
 
 ### In Progress
 
-- [ ] Refactor page section boxes and headings into custom components  
 
 ### Done ✓
 
+- [x] Refactor page section boxes and headings into custom components  
 - [x] Refactor layout into its own component and use for all pages  
 
