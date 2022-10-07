@@ -12,7 +12,7 @@ import {
 import NextLink from "next/link";
 
 type Project = {
-  data: {
+  metadata: {
     id: number;
     featured: boolean;
     title: string;
@@ -26,7 +26,7 @@ type Project = {
 
 export const FeaturedProjectCard = (project: Project) => (
   <LinkBox
-    key={project.data.id}
+    key={project.metadata.id}
     borderWidth="2px"
     _light={{ bgColor: "gray.50", borderColor: "gray.300" }}
     _dark={{ bgColor: "gray.900", borderColor: "gray.700" }}
@@ -39,9 +39,9 @@ export const FeaturedProjectCard = (project: Project) => (
     py={2}
   >
     <VStack alignItems="start" justifyContent="start" spacing={2}>
-      <NextLink href={`/projects#${project.data.id}`} passHref>
+      <NextLink href={`/projects#${project.metadata.id}`} passHref>
         <LinkOverlay>
-          <Heading size={["sm", "md"]}>{project.data.title}</Heading>
+          <Heading size={["sm", "md"]}>{project.metadata.title}</Heading>
         </LinkOverlay>
       </NextLink>
       <HStack
@@ -51,13 +51,13 @@ export const FeaturedProjectCard = (project: Project) => (
         // use gap instead, which only adds padding
         gap="0.5em"
       >
-        {project.data.technologies.map((technology) => (
+        {project.metadata.technologies.map((technology) => (
           <Tag key={technology} _light={{ bgColor: "gray.300" }} size="sm">
             {technology}
           </Tag>
         ))}
       </HStack>
-      <Text>{project.data.description}</Text>
+      <Text>{project.metadata.description}</Text>
     </VStack>
   </LinkBox>
 );

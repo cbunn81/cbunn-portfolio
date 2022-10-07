@@ -17,6 +17,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Change "data" to "metadata" in projects object  
 - [x] Add other project MDX files  
 - [x] Refactor Featured Projects to use the MDX files for projects, filtering on featured=true.  
 - [x] Refactor page section boxes and headings into custom components  

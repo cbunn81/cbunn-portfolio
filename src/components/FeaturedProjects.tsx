@@ -7,7 +7,7 @@ import SectionHeading from "@components/SectionHeading";
 import { FeaturedProjectCard } from "@components/FeaturedProjectCard";
 
 type Project = {
-  data: {
+  metadata: {
     id: number;
     featured: boolean;
     title: string;
@@ -21,14 +21,17 @@ type Project = {
 
 export default function FeaturedProjects({ projects }) {
   const featuredProjects = projects.filter(
-    (project) => project.data.featured === true
+    (project) => project.metadata.featured === true
   );
   return (
     <Section>
       <SectionHeading>Featured Projects:</SectionHeading>
       <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
         {featuredProjects.map((project: Project) => (
-          <FeaturedProjectCard key={project.data.id.toString()} {...project} />
+          <FeaturedProjectCard
+            key={project.metadata.id.toString()}
+            {...project}
+          />
         ))}
       </Flex>
       <Flex justifyContent="end" my={[4, 6]}>

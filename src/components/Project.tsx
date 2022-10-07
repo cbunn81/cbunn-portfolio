@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 type Project = {
-  data: {
+  metadata: {
     id: number;
     featured: boolean;
     title: string;
@@ -28,8 +28,8 @@ const components = {
 
 export const Project = (project: Project) => (
   <Stack
-    id={project.data.id.toString()}
-    key={project.data.id.toString()}
+    id={project.metadata.id.toString()}
+    key={project.metadata.id.toString()}
     as="section"
     my={[10, 20]}
     direction={["column", "row"]}
@@ -44,12 +44,12 @@ export const Project = (project: Project) => (
       my={[6, 0]}
       alignSelf="center"
       boxShadow="dark-lg"
-      src={`/images/${project.data.image}`}
-      alt={project.data.title}
+      src={`/images/${project.metadata.image}`}
+      alt={project.metadata.title}
     />
     <Box>
       <Heading size={"xl"} my={[2, 4]}>
-        {project.data.title}
+        {project.metadata.title}
       </Heading>
       <HStack
         wrap="wrap"
@@ -58,7 +58,7 @@ export const Project = (project: Project) => (
         // use gap instead, which only adds padding
         gap="0.5em"
       >
-        {project.data.technologies.map((technology) => (
+        {project.metadata.technologies.map((technology) => (
           <Tag key={technology} _light={{ bgColor: "gray.300" }} size="sm">
             {technology}
           </Tag>
