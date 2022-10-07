@@ -7,7 +7,6 @@ Project Description
 ### Todo
 
 - [ ] Use next-seo to handle head elements like title, description, open graph data  
-- [ ] Add other project MDX files (some need images)  
 - [ ] Generalize the Project type and move to separate file (what directory to use?)  
 - [ ] Figure out typing for MDX component props  
 - [ ] Create blog pages  
@@ -18,6 +17,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Add other project MDX files  
 - [x] Refactor Featured Projects to use the MDX files for projects, filtering on featured=true.  
 - [x] Refactor page section boxes and headings into custom components  
 - [x] Refactor layout into its own component and use for all pages  
