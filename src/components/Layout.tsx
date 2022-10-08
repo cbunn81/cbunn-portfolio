@@ -1,9 +1,11 @@
+import { ReactNode } from "react";
 import Head from "next/head";
 import { Container, Flex } from "@chakra-ui/react";
+
 import { Navbar } from "@components/Navbar";
 import { Footer } from "@components/Footer";
 
-const Layout = ({ children }) => (
+const Layout = ({ children }: { children?: ReactNode }) => (
   <>
     <Head>
       <title>Christopher Bunn - Home</title>
