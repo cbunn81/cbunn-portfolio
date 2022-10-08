@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { MDXRemote } from "next-mdx-remote";
 import {
   Box,
@@ -12,7 +13,7 @@ import {
 import { ProjectType } from "types";
 
 const components = {
-  p: (props) => <Text my={[2, 4]} {...props} />,
+  p: (props: { children?: ReactNode }) => <Text my={[2, 4]} {...props} />,
 };
 
 export const Project = (project: ProjectType) => (
