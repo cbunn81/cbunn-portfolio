@@ -1,4 +1,4 @@
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { MDXRemote } from "next-mdx-remote";
 import {
   Box,
   Heading,
@@ -9,24 +9,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-type Project = {
-  metadata: {
-    id: number;
-    featured: boolean;
-    title: string;
-    githubURL: string;
-    image: string;
-    description: string;
-    technologies: string[];
-  };
-  mdxSource: MDXRemoteSerializeResult;
-};
+import { ProjectType } from "@types";
 
 const components = {
   p: (props) => <Text my={[2, 4]} {...props} />,
 };
 
-export const Project = (project: Project) => (
+export const Project = (project: ProjectType) => (
   <Stack
     id={project.metadata.id.toString()}
     key={project.metadata.id.toString()}

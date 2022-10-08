@@ -1,5 +1,3 @@
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
-
 import {
   Heading,
   HStack,
@@ -11,20 +9,9 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 
-type Project = {
-  metadata: {
-    id: number;
-    featured: boolean;
-    title: string;
-    githubURL: string;
-    image: string;
-    description: string;
-    technologies: string[];
-  };
-  mdxSource: MDXRemoteSerializeResult;
-};
+import { ProjectType } from "@types";
 
-export const FeaturedProjectCard = (project: Project) => (
+export const FeaturedProjectCard = (project: ProjectType) => (
   <LinkBox
     key={project.metadata.id}
     borderWidth="2px"

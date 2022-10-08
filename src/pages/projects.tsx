@@ -4,12 +4,17 @@ import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 
+import { ProjectType } from "@types";
 import Section from "@components/Section";
 import TitleHeading from "@components/TitleHeading";
 import { Project } from "@components/Project";
 import { projectFilePaths, PROJECTS_PATH } from "@utils/mdxUtils";
 
-export default function Projects({ projects }) {
+type ProjectsProps = {
+  projects: ProjectType[];
+};
+
+export default function Projects({ projects }: ProjectsProps) {
   return (
     <>
       <Section>

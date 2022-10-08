@@ -1,25 +1,16 @@
 import { Flex, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
+import { ProjectType } from "@types";
 import Section from "@components/Section";
 import SectionHeading from "@components/SectionHeading";
 import { FeaturedProjectCard } from "@components/FeaturedProjectCard";
 
-type Project = {
-  metadata: {
-    id: number;
-    featured: boolean;
-    title: string;
-    githubURL: string;
-    image: string;
-    description: string;
-    technologies: string[];
-  };
-  mdxSource: MDXRemoteSerializeResult;
+type FeaturedProjectsProps = {
+  projects: ProjectType[];
 };
 
-export default function FeaturedProjects({ projects }) {
+export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
   const featuredProjects = projects.filter(
     (project) => project.metadata.featured === true
   );
@@ -27,7 +18,7 @@ export default function FeaturedProjects({ projects }) {
     <Section>
       <SectionHeading>Featured Projects:</SectionHeading>
       <Flex flexDirection={["column", "row"]} flexWrap="wrap" gap="1em">
-        {featuredProjects.map((project: Project) => (
+        {featuredProjects.map((project: ProjectType) => (
           <FeaturedProjectCard
             key={project.metadata.id.toString()}
             {...project}

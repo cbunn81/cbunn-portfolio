@@ -2,15 +2,21 @@ import fs from "fs";
 import path from "path";
 
 import matter from "gray-matter";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { Link, Text } from "@chakra-ui/react";
 
+import { ProjectType } from "@types";
 import FeaturedProjects from "@components/FeaturedProjects";
 import Section from "@components/Section";
 import TitleHeading from "@components/TitleHeading";
 import { projectFilePaths, PROJECTS_PATH } from "@utils/mdxUtils";
 
-export default function Index({ projects }) {
+type IndexProps = {
+  projects: ProjectType[];
+};
+
+export default function Index({ projects }: IndexProps) {
   return (
     <>
       <Section>

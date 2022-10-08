@@ -27,6 +27,7 @@
       "@data/*": ["data/*"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
+      "@types/*": ["types/*"],
       "@utils/*": ["utils/*"]
     }
   },
