@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 
 import matter from "gray-matter";
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { Link, Text } from "@chakra-ui/react";
 
