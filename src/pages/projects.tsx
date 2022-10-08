@@ -4,7 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 
-import { ProjectType } from "@types";
+import { ProjectType } from "types";
 import Section from "@components/Section";
 import TitleHeading from "@components/TitleHeading";
 import { Project } from "@components/Project";

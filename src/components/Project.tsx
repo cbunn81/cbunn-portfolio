@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import { ProjectType } from "@types";
+import { ProjectType } from "types";
 
 const components = {
   p: (props) => <Text my={[2, 4]} {...props} />,

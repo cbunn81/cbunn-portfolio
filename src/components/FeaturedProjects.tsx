@@ -1,7 +1,7 @@
 import { Flex, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 
-import { ProjectType } from "@types";
+import { ProjectType } from "types";
 import Section from "@components/Section";
 import SectionHeading from "@components/SectionHeading";
 import { FeaturedProjectCard } from "@components/FeaturedProjectCard";

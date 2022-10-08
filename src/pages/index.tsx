@@ -5,7 +5,7 @@ import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { Link, Text } from "@chakra-ui/react";
 
-import { ProjectType } from "@types";
+import { ProjectType } from "types";
 import FeaturedProjects from "@components/FeaturedProjects";
 import Section from "@components/Section";
 import TitleHeading from "@components/TitleHeading";

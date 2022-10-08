@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 
-import { ProjectType } from "@types";
+import { ProjectType } from "types";
 
 export const FeaturedProjectCard = (project: ProjectType) => (
   <LinkBox
