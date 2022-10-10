@@ -15,6 +15,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Shorten and improve project descriptions  
 - [x] Change checkr gif to have larger text  
 - [x] Figure out typing for MDX component props  
 - [x] Generalize the Project type and move to separate file (what directory to use?)  
