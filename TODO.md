@@ -6,6 +6,7 @@ Project Description
 
 ### Todo
 
+- [ ] Use NextImage with project images.  
 - [ ] Use next-seo to handle head elements like title, description, open graph data  
 - [ ] Create blog pages  
 - [ ] Create photo page  
@@ -15,6 +16,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Add links to projects for GitHub  
 - [x] Shorten and improve project descriptions  
 - [x] Change checkr gif to have larger text  
 - [x] Figure out typing for MDX component props  

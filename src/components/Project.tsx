@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { MDXRemote } from "next-mdx-remote";
 import {
   Box,
+  Button,
   Heading,
   HStack,
   Image,
@@ -9,6 +10,8 @@ import {
   Tag,
   Text,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
+import { FaGithub } from "react-icons/fa";
 
 import { ProjectType } from "types";
 
@@ -54,8 +57,17 @@ export const Project = (project: ProjectType) => (
           </Tag>
         ))}
       </HStack>
-      {/* <Text my={[2, 4]}>{project.mdxSource}</Text> */}
       <MDXRemote {...project.mdxSource} components={components} />
+      <NextLink href={project.metadata.githubURL} passHref>
+        <Button
+          as="a"
+          variant="outline"
+          aria-label="See this project on GitHub"
+          leftIcon={<FaGithub />}
+        >
+          See on GitHub
+        </Button>
+      </NextLink>
     </Box>
   </Stack>
 );
