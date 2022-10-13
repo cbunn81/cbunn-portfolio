@@ -5,7 +5,6 @@ import {
   Button,
   Heading,
   HStack,
-  Image,
   Stack,
   Tag,
   Text,
@@ -13,6 +12,7 @@ import {
 import NextLink from "next/link";
 import { FaGithub } from "react-icons/fa";
 
+import { ChakraNextImage } from "./ChakraNextImage";
 import { ProjectType } from "types";
 
 const components = {
@@ -26,11 +26,12 @@ export const Project = (project: ProjectType) => (
     as="section"
     my={[10, 20]}
     direction={["column", "row"]}
+    // direction="column"
     _odd={{ flexDirection: { sm: "row-reverse" } }}
     justifyContent="space-between"
     gap={[0, 8]}
   >
-    <Image
+    <ChakraNextImage
       // Aspect ratio is 1.475
       w={["100vw", "clamp(200px, 40vw, 450px)"]}
       h={["68vw", "clamp(136px, 27vw, 305px)"]}
@@ -40,7 +41,9 @@ export const Project = (project: ProjectType) => (
       src={`/images/${project.metadata.image}`}
       alt={project.metadata.title}
     />
-    <Box>
+    <Box flex="1">
+      {/* flex of 1 is needed to keep the description from overflowing
+			over the image containing box */}
       <Heading size={"xl"} my={[2, 4]}>
         {project.metadata.title}
       </Heading>
