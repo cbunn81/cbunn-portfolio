@@ -7,22 +7,6 @@ import { Footer } from "@components/Footer";
 
 const Layout = ({ children }: { children?: ReactNode }) => (
   <>
-    <Head>
-      <title>Christopher Bunn - Home</title>
-      <meta name="author" content="Christopher Bunn" />
-      <meta
-        name="description"
-        content="I'm Christopher Bunn. I'm Web and Software Developer based in Tokushima, Japan."
-      />
-      <meta
-        property="og:title"
-        content="Christopher Bunn - Web and Software Developer"
-      />
-      <meta
-        property="og:description"
-        content="I'm Christopher Bunn. I'm Web and Software Developer based in Tokushima, Japan."
-      />
-    </Head>
     <Flex
       h="100vh"
       flexDirection={"column"}
