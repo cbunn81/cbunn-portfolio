@@ -6,12 +6,12 @@ Project Description
 
 ### Todo
 
-- [ ] Use next-seo to handle head elements like title, description, open graph data  
 - [ ] Create blog pages  
 - [ ] Create photo page  
 
 ### In Progress
 
+- [ ] Use next-seo to handle head elements like title, description, open graph data  
 
 ### Done ✓
 
