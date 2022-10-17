@@ -6,11 +6,13 @@ Project Description
 
 ### Todo
 
+- [ ] Add anchor to project headings  
 - [ ] Create blog pages  
 - [ ] Create photo page  
 
 ### In Progress
 
+- [ ] Add hero image to index header  
 - [ ] Use next-seo to handle head elements like title, description, open graph data  
 
 ### Done ✓

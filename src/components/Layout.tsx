@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
-import Head from "next/head";
-import { Container, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 import { Navbar } from "@components/Navbar";
 import { Footer } from "@components/Footer";
@@ -14,17 +13,9 @@ const Layout = ({ children }: { children?: ReactNode }) => (
       alignItems={"center"}
     >
       <Navbar />
-      <Container
-        as="main"
-        maxW={"container.lg"}
-        w={"95%"}
-        px={4}
-        py={[2, 4]}
-        flex="1"
-        alignItems={"start"}
-      >
+      <Flex as="main" w="100%" flexDirection={"column"} alignItems={"center"}>
         {children}
-      </Container>
+      </Flex>
       <Footer />
     </Flex>
   </>
