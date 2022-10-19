@@ -6,7 +6,7 @@ import { serialize } from "next-mdx-remote/serialize";
 
 import { ProjectType } from "types";
 import Section from "@components/Section";
-import TitleHeading from "@components/TitleHeading";
+import HeroHeading from "@components/HeroHeading";
 import { Project } from "@components/Project";
 import { projectFilePaths, PROJECTS_PATH } from "@utils/mdxUtils";
 
@@ -17,12 +17,12 @@ type ProjectsProps = {
 export default function Projects({ projects }: ProjectsProps) {
   return (
     <>
+      <HeroHeading>Projects!</HeroHeading>
       <Section>
-        <TitleHeading>Projects!</TitleHeading>
+        {projects.map((project) => (
+          <Project key={project.metadata.id} {...project} />
+        ))}
       </Section>
-      {projects.map((project) => (
-        <Project key={project.metadata.id} {...project} />
-      ))}
     </>
   );
 }

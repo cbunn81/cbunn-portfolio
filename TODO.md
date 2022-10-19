@@ -6,17 +6,18 @@ Project Description
 
 ### Todo
 
+- [ ] Refactor hero background images to use Next image optimization  
 - [ ] Add anchor to project headings  
 - [ ] Create blog pages  
 - [ ] Create photo page  
 
 ### In Progress
 
-- [ ] Add hero image to index header  
 - [ ] Use next-seo to handle head elements like title, description, open graph data  
 
 ### Done ✓
 
+- [x] Add hero image to index and projects pages  
 - [x] Use NextImage with project images.  
 - [x] Add links to projects for GitHub  
 - [x] Shorten and improve project descriptions  
