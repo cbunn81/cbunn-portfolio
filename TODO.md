@@ -6,7 +6,10 @@ Project Description
 
 ### Todo
 
-- [ ] Refactor hero background images to use Next image optimization  
+- [ ] As it doesn't seem possible (or at least worth the trouble) to add a CSS filter onto a Next Image, darken the light mode image directly and re-upload.  
+- [ ] In mobile, change the menu such that when another page is chosen, the menu re-hides. As of now, the menu has to be manually closed after navigating to another page.  
+- [ ] Sort out negative space between hero heading and text on the home page and the projects on the projects page.  
+- [ ] Consider a placeholder method or a way to preload hero images so that when the color mode is changed, the delay in changing them is less annoying.  
 - [ ] Add anchor to project headings  
 - [ ] Create blog pages  
 - [ ] Create photo page  
@@ -17,6 +20,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Refactor hero background images to use Next image optimization  
 - [x] Add hero image to index and projects pages  
 - [x] Use NextImage with project images.  
 - [x] Add links to projects for GitHub  
