@@ -28,7 +28,8 @@
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
       "@types/*": ["types/*"],
-      "@utils/*": ["utils/*"]
+      "@utils/*": ["utils/*"],
+      "@images/*": ["../public/images/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/next-seo.config.js"],

@@ -2,17 +2,11 @@ import { Flex, useColorModeValue } from "@chakra-ui/react";
 import { Heading, HeadingProps } from "@chakra-ui/react";
 import NextImage from "next/image";
 
-import Section from "./Section";
+import Section from "@components/Section";
+import lightHeroBackgroundImage from "@images/gokyo-ri-crop.jpg";
+import darkHeroBackgroundImage from "@images/sunset-crop.jpg";
 
 const HeroHeading = (props: HeadingProps) => {
-  const backgroundSrc = useColorModeValue(
-    "/images/gokyo-ri-crop.jpg",
-    "/images/sunset-crop.jpg"
-  );
-  const backgroundAlt = useColorModeValue(
-    "The view from the summit of Gokyo Ri in Nepal",
-    "Sunset over the Yoshino River in Tokushima"
-  );
   return (
     <Section w="100%" maxW="100%" mx="0" my="0" position="relative">
       <Flex
@@ -25,11 +19,18 @@ const HeroHeading = (props: HeadingProps) => {
         alignItems="center"
       >
         <NextImage
-          src={backgroundSrc}
-          alt={backgroundAlt}
+          src={useColorModeValue(
+            lightHeroBackgroundImage,
+            darkHeroBackgroundImage
+          )}
+          alt={useColorModeValue(
+            "The view from the summit of Gokyo Ri in Nepal",
+            "Sunset over the Yoshino River in Tokushima"
+          )}
           layout="fill"
           objectFit="cover"
           objectPosition="center"
+          placeholder="blur"
         />
         <Heading
           as="h1"
