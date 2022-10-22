@@ -33,8 +33,8 @@ export const Project = (project: ProjectType) => (
   >
     <ChakraNextImage
       // Aspect ratio is 1.475
-      w={["100vw", "clamp(200px, 40vw, 450px)"]}
-      h={["68vw", "clamp(136px, 27vw, 305px)"]}
+      w={["100%", "clamp(200px, 40vw, 450px)"]}
+      sx={{ aspectRatio: "1.475" }}
       my={[6, 0]}
       alignSelf="center"
       boxShadow="dark-lg"
