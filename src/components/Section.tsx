@@ -5,7 +5,7 @@ const Section = (props: BoxProps) => (
     as="section"
     maxW="container.lg"
     w="95%"
-    my={[4, 8]}
+    my={[8, 12]}
     mx={[4, 8]}
     flex="1"
     alignItems="start"

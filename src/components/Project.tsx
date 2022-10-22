@@ -25,6 +25,7 @@ export const Project = (project: ProjectType) => (
     key={project.metadata.id.toString()}
     as="section"
     my={[10, 20]}
+    _first={{ marginTop: "0" }}
     direction={["column", "row"]}
     // direction="column"
     _odd={{ flexDirection: { sm: "row-reverse" } }}
