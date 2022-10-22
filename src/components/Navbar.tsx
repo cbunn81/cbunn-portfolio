@@ -18,19 +18,37 @@ export const Navbar = () => {
   const navItems = (
     <>
       <NextLink href="/projects" passHref>
-        <Button as="a" variant="ghost" aria-label="Projects" py={5}>
+        <Button
+          as="a"
+          variant="ghost"
+          aria-label="Projects"
+          py={5}
+          onClick={onClose}
+        >
           Projects
         </Button>
       </NextLink>
 
       <NextLink href="/blog" passHref>
-        <Button as="a" variant="ghost" aria-label="Blog" py={5}>
+        <Button
+          as="a"
+          variant="ghost"
+          aria-label="Blog"
+          py={5}
+          onClick={onClose}
+        >
           Blog
         </Button>
       </NextLink>
 
       <NextLink href="/photos" passHref>
-        <Button as="a" variant="ghost" aria-label="Photos" py={5}>
+        <Button
+          as="a"
+          variant="ghost"
+          aria-label="Photos"
+          py={5}
+          onClick={onClose}
+        >
           Photos
         </Button>
       </NextLink>
@@ -60,7 +78,13 @@ export const Navbar = () => {
         />
         <HStack spacing={8} alignItems={"center"}>
           <NextLink href="/" passHref>
-            <Button as="a" variant="ghost" aria-label="Home" py={5}>
+            <Button
+              as="a"
+              variant="ghost"
+              aria-label="Home"
+              py={5}
+              onClick={onClose}
+            >
               cbunn
             </Button>
           </NextLink>
