@@ -31,6 +31,7 @@ const HeroHeading = (props: HeadingProps) => {
           objectFit="cover"
           objectPosition="center"
           placeholder="blur"
+          priority
         />
         <Heading
           as="h1"
