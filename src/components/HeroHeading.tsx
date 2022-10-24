@@ -3,7 +3,7 @@ import { Heading, HeadingProps } from "@chakra-ui/react";
 import NextImage from "next/image";
 
 import Section from "@components/Section";
-import lightHeroBackgroundImage from "@images/gokyo-ri-crop.jpg";
+import lightHeroBackgroundImage from "@images/gokyo-ri-crop-filtered.jpg";
 import darkHeroBackgroundImage from "@images/sunset-crop.jpg";
 
 const HeroHeading = (props: HeadingProps) => {
