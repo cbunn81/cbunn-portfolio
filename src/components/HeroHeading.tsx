@@ -18,20 +18,31 @@ const HeroHeading = (props: HeadingProps) => {
         justifyContent="center"
         alignItems="center"
       >
+        {/* Light Mode Background Image */}
         <NextImage
-          src={useColorModeValue(
-            lightHeroBackgroundImage,
-            darkHeroBackgroundImage
-          )}
-          alt={useColorModeValue(
-            "The view from the summit of Gokyo Ri in Nepal",
-            "Sunset over the Yoshino River in Tokushima"
-          )}
+          src={lightHeroBackgroundImage}
+          alt="The view from the summit of Gokyo Ri in Nepal"
           layout="fill"
           objectFit="cover"
           objectPosition="center"
           placeholder="blur"
           priority
+          style={{
+            visibility: useColorModeValue("visible", "hidden"),
+          }}
+        />
+        {/* Dark Mode Background Image */}
+        <NextImage
+          src={darkHeroBackgroundImage}
+          alt="Sunset over the Yoshino River in Tokushima"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          placeholder="blur"
+          priority
+          style={{
+            visibility: useColorModeValue("hidden", "visible"),
+          }}
         />
         <Heading
           as="h1"

@@ -16,6 +16,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Fix blur placeholder for dark color mode (currently the blur is from the light color mode even when loading dark)  
 - [x] As it doesn't seem possible (or at least worth the trouble) to add a CSS filter onto a Next Image, darken the light mode image directly and re-upload.  
 - [x] Replace hero images with high-res versions from source photos  
 - [x] Sort out negative space between hero heading and text on the home page and the projects on the projects page.  
