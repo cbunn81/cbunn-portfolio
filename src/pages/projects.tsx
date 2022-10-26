@@ -3,6 +3,7 @@ import path from "path";
 
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
+import { NextSeo } from "next-seo";
 
 import { ProjectType } from "types";
 import Section from "@components/Section";
@@ -17,6 +18,10 @@ type ProjectsProps = {
 export default function Projects({ projects }: ProjectsProps) {
   return (
     <>
+      <NextSeo
+        title="Christopher Bunn - Projects"
+        openGraph={{ title: "Christopher Bunn - Projects" }}
+      />
       <HeroHeading>Projects!</HeroHeading>
       <Section>
         {projects.map((project) => (

@@ -4,6 +4,7 @@ import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import { Link, Text } from "@chakra-ui/react";
+import { NextSeo } from "next-seo";
 
 import { ProjectType } from "types";
 import FeaturedProjects from "@components/FeaturedProjects";
@@ -18,6 +19,10 @@ type IndexProps = {
 export default function Index({ projects }: IndexProps) {
   return (
     <>
+      <NextSeo
+        title="Christopher Bunn - Home"
+        openGraph={{ title: "Christopher Bunn - Home" }}
+      />
       <HeroHeading>Hello World!</HeroHeading>
       <Section>
         <Text fontSize="xl">
