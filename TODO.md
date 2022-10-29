@@ -9,10 +9,10 @@ Project Description
 - [ ] Fix blur placeholder for dark color mode (currently the blur is from the light color mode even when loading dark) *This is likely due to the known color mode flashing bug in Chakra UI when reloading a dark mode page*  
 - [ ] Add anchor to project headings  
 - [ ] Create blog pages  
-- [ ] Create photo page  
 
 ### In Progress
 
+- [ ] Create photo page  
 
 ### Done ✓
 
