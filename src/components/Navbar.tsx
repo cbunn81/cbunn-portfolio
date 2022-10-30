@@ -29,7 +29,7 @@ export const Navbar = () => {
         </Button>
       </NextLink>
 
-      <NextLink href="/blog" passHref>
+      {/* <NextLink href="/blog" passHref>
         <Button
           as="a"
           variant="ghost"
@@ -39,7 +39,7 @@ export const Navbar = () => {
         >
           Blog
         </Button>
-      </NextLink>
+      </NextLink> */}
 
       <NextLink href="/photos" passHref>
         <Button
