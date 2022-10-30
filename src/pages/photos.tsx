@@ -71,18 +71,21 @@ export async function getStaticProps() {
   const photoReadPath = "public/images/featured_photos/";
   const photoSrcPath = "/images/featured_photos/";
   const photos = await Promise.all(
-    fs.readdirSync(photoReadPath).map(async (file) => {
-      const { ImageDescription } = await exifr.parse(
-        path.join(photoReadPath, file)
-      );
-      const dimensions = imageSize(path.join(photoReadPath, file));
-      return {
-        caption: ImageDescription ?? null,
-        src: path.join(photoSrcPath, file),
-        width: dimensions.width,
-        height: dimensions.height,
-      };
-    })
+    fs
+      .readdirSync(photoReadPath)
+      .filter((path) => /\.(jpg|jpeg)$/.test(path))
+      .map(async (file) => {
+        const { ImageDescription } = await exifr.parse(
+          path.join(photoReadPath, file)
+        );
+        const dimensions = imageSize(path.join(photoReadPath, file));
+        return {
+          caption: ImageDescription ?? null,
+          src: path.join(photoSrcPath, file),
+          width: dimensions.width,
+          height: dimensions.height,
+        };
+      })
   );
 
   return {
