@@ -33,7 +33,7 @@ export default function Projects({ photos }: PhotosProps) {
       <Section>
         <VStack spacing={[20, 40]}>
           {photos.map((photo) => (
-            <VStack w="100%">
+            <VStack key={photo.src} w="100%">
               <ChakraNextImage
                 src={photo.src}
                 w={[
