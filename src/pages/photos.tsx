@@ -67,7 +67,6 @@ export default function Projects({ photos }: PhotosProps) {
   );
 }
 
-// For now, async is removed because there's no awaiting the hard-coded array
 export async function getStaticProps() {
   const photoReadPath = "public/images/featured_photos/";
   const photoSrcPath = "/images/featured_photos/";
