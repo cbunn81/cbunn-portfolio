@@ -6,7 +6,6 @@ Project Description
 
 ### Todo
 
-- [ ] Add next/image priority to first featured photo.  
 - [ ] Add watermark to featured photos and re-upload.  
 - [ ] Fix blur placeholder for dark color mode (currently the blur is from the light color mode even when loading dark) *This is likely due to the known color mode flashing bug in Chakra UI when reloading a dark mode page*  
 - [ ] Add anchor to project headings  
@@ -17,6 +16,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Add next/image priority to first featured photo.  
 - [x] Add placeholder method to ChakraNextImage to allow for blurred versions of images to be loaded first.  
 - [x] Create photo page  
 - [x] Use next-seo to handle head elements like title, description, open graph data  

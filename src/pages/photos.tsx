@@ -37,7 +37,7 @@ export default function Projects({ photos }: PhotosProps) {
       </Section>
       <Section>
         <VStack spacing={[20, 40]}>
-          {photos.map((photo) => (
+          {photos.map((photo, index) => (
             <VStack key={photo.src} w="100%">
               <ChakraNextImage
                 src={photo.src}
@@ -55,6 +55,7 @@ export default function Projects({ photos }: PhotosProps) {
                     : "clamp(600px, 75vw, 1000px)",
                 ]}
                 sx={{ aspectRatio: String(photo.width / photo.height) }}
+                priority={index === 0}
               />
               <Text>{photo.caption}</Text>
             </VStack>
