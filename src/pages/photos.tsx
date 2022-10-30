@@ -41,6 +41,7 @@ export default function Projects({ photos }: PhotosProps) {
             <VStack key={photo.src} w="100%">
               <ChakraNextImage
                 src={photo.src}
+                alt={photo.caption ?? ""}
                 w={[
                   "100%",
                   photo.width >= photo.height
