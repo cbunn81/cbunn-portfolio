@@ -55,6 +55,7 @@ export default function Projects({ photos }: PhotosProps) {
                     : "clamp(600px, 75vw, 1000px)",
                 ]}
                 sx={{ aspectRatio: String(photo.width / photo.height) }}
+                boxShadow="lg"
                 priority={index === 0}
               />
               <Text>{photo.caption}</Text>
