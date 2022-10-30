@@ -1,3 +1,8 @@
+import fs from "fs";
+import path from "path";
+import exifr from "exifr";
+import imageSize from "image-size";
+
 import { NextSeo } from "next-seo";
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 
@@ -6,7 +11,7 @@ import Section from "@components/Section";
 import HeroHeading from "@components/HeroHeading";
 
 type PhotoType = {
-  caption: string;
+  caption: string | null;
   src: string;
   width: number;
   height: number;
@@ -60,21 +65,23 @@ export default function Projects({ photos }: PhotosProps) {
 }
 
 // For now, async is removed because there's no awaiting the hard-coded array
-export function getStaticProps() {
-  const photos = [
-    {
-      caption: "this is a caption",
-      src: "/images/featured_photos/D2H_1702.jpg",
-      width: 1545,
-      height: 2332,
-    },
-    {
-      caption: "this is another caption",
-      src: "/images/featured_photos/D2H_7705.jpg",
-      width: 2464,
-      height: 1632,
-    },
-  ];
+export async function getStaticProps() {
+  const photoReadPath = "public/images/featured_photos/";
+  const photoSrcPath = "/images/featured_photos/";
+  const photos = await Promise.all(
+    fs.readdirSync(photoReadPath).map(async (file) => {
+      const { ImageDescription } = await exifr.parse(
+        path.join(photoReadPath, file)
+      );
+      const dimensions = imageSize(path.join(photoReadPath, file));
+      return {
+        caption: ImageDescription ?? null,
+        src: path.join(photoSrcPath, file),
+        width: dimensions.width,
+        height: dimensions.height,
+      };
+    })
+  );
 
   return {
     props: {
