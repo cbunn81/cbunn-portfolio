@@ -39,7 +39,7 @@ export const Project = (project: ProjectType) => (
       my={[6, 0]}
       alignSelf="center"
       boxShadow="dark-lg"
-      src={`/images/${project.metadata.image}`}
+      src={`/images/projects/${project.metadata.image}`}
       alt={project.metadata.title}
     />
     <Box flex="1">
