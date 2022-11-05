@@ -6,6 +6,7 @@ export type ProjectType = {
     featured: boolean;
     title: string;
     githubURL: string;
+    demoURL?: string;
     image: string;
     description: string;
     technologies: string[];

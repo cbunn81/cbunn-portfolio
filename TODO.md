@@ -16,6 +16,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Add button for live demo for projects  
 - [x] Add project MDX files for custom landing pages  
 - [x] Add watermark to featured photos and re-upload.  
 - [x] Add next/image priority to first featured photo.  

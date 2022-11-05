@@ -10,7 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 
 import { ChakraNextImage } from "./ChakraNextImage";
 import { ProjectType } from "types";
@@ -68,10 +68,25 @@ export const Project = (project: ProjectType) => (
           variant="outline"
           aria-label="See this project on GitHub"
           leftIcon={<FaGithub />}
+          marginRight={[2, 4]}
+          marginBottom={[2, 4]}
         >
           See on GitHub
         </Button>
       </NextLink>
+      {project.metadata.demoURL && (
+        <NextLink href={project.metadata.demoURL} passHref>
+          <Button
+            as="a"
+            variant="outline"
+            aria-label="See a live demo"
+            leftIcon={<FaGlobe />}
+            marginBottom={[2, 4]}
+          >
+            See a live demo
+          </Button>
+        </NextLink>
+      )}
     </Box>
   </Stack>
 );
