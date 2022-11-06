@@ -6,6 +6,7 @@ Project Description
 
 ### Todo
 
+- [ ] Refactor components to all use default exports.  
 - [ ] Fix blur placeholder for dark color mode (currently the blur is from the light color mode even when loading dark) *This is likely due to the known color mode flashing bug in Chakra UI when reloading a dark mode page*  
 - [ ] Add anchor to project headings  
 - [ ] Create blog pages  
@@ -15,6 +16,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Add a README  
 - [x] Refactor photo type and component from photos page  
 - [x] Add button for live demo for projects  
 - [x] Add project MDX files for custom landing pages  
