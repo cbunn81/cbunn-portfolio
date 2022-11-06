@@ -6,16 +6,10 @@ import imageSize from "image-size";
 import { NextSeo } from "next-seo";
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 
+import { PhotoType } from "types";
 import { ChakraNextImage } from "@components/ChakraNextImage";
 import Section from "@components/Section";
 import HeroHeading from "@components/HeroHeading";
-
-type PhotoType = {
-  caption: string | null;
-  src: string;
-  width: number;
-  height: number;
-};
 
 type PhotosProps = {
   photos: PhotoType[];
