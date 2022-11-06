@@ -6,7 +6,6 @@ Project Description
 
 ### Todo
 
-- [ ] Refactor photo type and component from photos page  
 - [ ] Fix blur placeholder for dark color mode (currently the blur is from the light color mode even when loading dark) *This is likely due to the known color mode flashing bug in Chakra UI when reloading a dark mode page*  
 - [ ] Add anchor to project headings  
 - [ ] Create blog pages  
@@ -16,6 +15,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Refactor photo type and component from photos page  
 - [x] Add button for live demo for projects  
 - [x] Add project MDX files for custom landing pages  
 - [x] Add watermark to featured photos and re-upload.  

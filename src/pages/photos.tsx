@@ -4,12 +4,12 @@ import exifr from "exifr";
 import imageSize from "image-size";
 
 import { NextSeo } from "next-seo";
-import { Box, Flex, Text, VStack } from "@chakra-ui/react";
+import { Text, VStack } from "@chakra-ui/react";
 
 import { PhotoType } from "types";
-import { ChakraNextImage } from "@components/ChakraNextImage";
 import Section from "@components/Section";
 import HeroHeading from "@components/HeroHeading";
+import FeaturedPhoto from "@components/FeaturedPhoto";
 
 type PhotosProps = {
   photos: PhotoType[];
@@ -31,30 +31,13 @@ export default function Projects({ photos }: PhotosProps) {
       </Section>
       <Section>
         <VStack spacing={[20, 40]}>
-          {photos.map((photo, index) => (
-            <VStack key={photo.src} w="100%">
-              <ChakraNextImage
-                src={photo.src}
-                alt={photo.caption ?? ""}
-                w={[
-                  "100%",
-                  photo.width >= photo.height
-                    ? "clamp(600px, 75vw, 1000px)"
-                    : "auto",
-                ]}
-                h={[
-                  "auto",
-                  photo.width >= photo.height
-                    ? "auto"
-                    : "clamp(600px, 75vw, 1000px)",
-                ]}
-                sx={{ aspectRatio: String(photo.width / photo.height) }}
-                boxShadow="lg"
-                priority={index === 0}
-              />
-              <Text>{photo.caption}</Text>
-            </VStack>
-          ))}
+          {photos.map((photo, index) => {
+            const props = {
+              photo: photo,
+              priority: index === 0,
+            };
+            return <FeaturedPhoto key={photo.src} {...props} />;
+          })}
         </VStack>
       </Section>
     </>
