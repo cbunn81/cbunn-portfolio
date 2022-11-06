@@ -6,7 +6,7 @@ import Section from "@components/Section";
 import lightHeroBackgroundImage from "@images/gokyo-ri-crop-filtered.jpg";
 import darkHeroBackgroundImage from "@images/sunset-crop.jpg";
 
-const HeroHeading = (props: HeadingProps) => {
+export default function HeroHeading(props: HeadingProps) {
   return (
     <Section w="100%" maxW="100%" mx="0" my="0" position="relative">
       <Flex
@@ -59,6 +59,4 @@ const HeroHeading = (props: HeadingProps) => {
       </Flex>
     </Section>
   );
-};
-
-export default HeroHeading;
+}

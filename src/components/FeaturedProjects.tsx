@@ -4,7 +4,7 @@ import NextLink from "next/link";
 import { ProjectType } from "types";
 import Section from "@components/Section";
 import SectionHeading from "@components/SectionHeading";
-import { FeaturedProjectCard } from "@components/FeaturedProjectCard";
+import FeaturedProjectCard from "@components/FeaturedProjectCard";
 
 type FeaturedProjectsProps = {
   projects: ProjectType[];
@@ -21,7 +21,7 @@ export default function FeaturedProjects({ projects }: FeaturedProjectsProps) {
         {featuredProjects.map((project: ProjectType) => (
           <FeaturedProjectCard
             key={project.metadata.id.toString()}
-            {...project}
+            project={project}
           />
         ))}
       </Flex>

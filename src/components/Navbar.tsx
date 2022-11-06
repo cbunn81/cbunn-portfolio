@@ -10,9 +10,10 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
-import { DarkModeSwitch } from "@components/DarkModeSwitch";
 
-export const Navbar = () => {
+import DarkModeSwitch from "@components/DarkModeSwitch";
+
+export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const navItems = (
@@ -111,4 +112,4 @@ export const Navbar = () => {
       )}
     </Box>
   );
-};
+}

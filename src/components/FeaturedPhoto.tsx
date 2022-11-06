@@ -1,7 +1,7 @@
 import { Text, VStack } from "@chakra-ui/react";
 
 import { PhotoType } from "types";
-import { ChakraNextImage } from "./ChakraNextImage";
+import ChakraNextImage from "@components/ChakraNextImage";
 
 type PhotoProps = {
   photo: PhotoType;

@@ -8,7 +8,7 @@ import { NextSeo } from "next-seo";
 import { ProjectType } from "types";
 import Section from "@components/Section";
 import HeroHeading from "@components/HeroHeading";
-import { Project } from "@components/Project";
+import Project from "@components/Project";
 import { projectFilePaths, PROJECTS_PATH } from "@utils/mdxUtils";
 
 type ProjectsProps = {
@@ -25,7 +25,7 @@ export default function Projects({ projects }: ProjectsProps) {
       <HeroHeading>Projects!</HeroHeading>
       <Section>
         {projects.map((project) => (
-          <Project key={project.metadata.id} {...project} />
+          <Project key={project.metadata.id} project={project} />
         ))}
       </Section>
     </>
