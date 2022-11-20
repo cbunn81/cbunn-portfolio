@@ -15,6 +15,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Remove unnecessary curly braces around quoted strings.  
 - [x] Refactor components to all use default exports.  
 - [x] Add a README  
 - [x] Refactor photo type and component from photos page  

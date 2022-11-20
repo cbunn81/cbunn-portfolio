@@ -50,7 +50,7 @@ export default function Project({ project }: ProjectProps) {
       <Box flex="1">
         {/* flex of 1 is needed to keep the description from overflowing
 			over the image containing box */}
-        <Heading size={"xl"} my={[2, 4]}>
+        <Heading size="xl" my={[2, 4]}>
           {project.metadata.title}
         </Heading>
         <HStack

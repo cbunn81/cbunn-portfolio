@@ -14,7 +14,7 @@ export default function Footer() {
       px="4"
     >
       <Box>
-        <Text fontSize={"xs"}>Copyright &copy; 2022 - Christopher Bunn</Text>
+        <Text fontSize="xs">Copyright &copy; 2022 - Christopher Bunn</Text>
       </Box>
       <Box>
         <IconButton

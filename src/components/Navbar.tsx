@@ -59,25 +59,25 @@ export default function Navbar() {
     <Box
       bg={useColorModeValue("white", "gray.700")}
       px={4}
-      boxShadow={"lg"}
+      boxShadow="lg"
       w="100%"
     >
       <Flex
         h={16}
-        alignItems={"center"}
-        justifyContent={"space-between"}
+        alignItems="center"
+        justifyContent="space-between"
         w={["95%", "95%", "95%"]}
-        maxW={"container.lg"}
+        maxW="container.lg"
         mx="auto"
       >
         <IconButton
-          size={"md"}
+          size="md"
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-          aria-label={"Open Menu"}
+          aria-label="Open Menu"
           display={["inherit", "none", "none"]}
           onClick={isOpen ? onClose : onOpen}
         />
-        <HStack spacing={8} alignItems={"center"}>
+        <HStack spacing={8} alignItems="center">
           <NextLink href="/" passHref>
             <Button
               as="a"
@@ -93,7 +93,7 @@ export default function Navbar() {
             {navItems}
           </HStack>
         </HStack>
-        <Flex alignItems={"center"}>
+        <Flex alignItems="center">
           <DarkModeSwitch />
         </Flex>
       </Flex>
@@ -102,10 +102,10 @@ export default function Navbar() {
         <Box
           py={4}
           w={["100%", "100%", "80%"]}
-          maxW={"container.lg"}
+          maxW="container.lg"
           display={["inherit", "none", "none"]}
         >
-          <Stack as={"nav"} spacing={4}>
+          <Stack as="nav" spacing={4}>
             {navItems}
           </Stack>
         </Box>

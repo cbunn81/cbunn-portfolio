@@ -9,12 +9,12 @@ export default function Layout({ children }: { children?: ReactNode }) {
     <>
       <Flex
         h="100vh"
-        flexDirection={"column"}
+        flexDirection="column"
         justifyContent="start"
-        alignItems={"center"}
+        alignItems="center"
       >
         <Navbar />
-        <Flex as="main" w="100%" flexDirection={"column"} alignItems={"center"}>
+        <Flex as="main" w="100%" flexDirection="column" alignItems="center">
           {children}
         </Flex>
         <Footer />
