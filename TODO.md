@@ -17,6 +17,7 @@ Project Description
 
 ### Done ✓
 
+- [x] Add favicons  
 - [x] Optimize images before upload  
 - [x] Remove unnecessary curly braces around quoted strings.  
 - [x] Refactor components to all use default exports.  

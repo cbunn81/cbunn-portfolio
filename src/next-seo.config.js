@@ -20,4 +20,31 @@ export default {
       },
     ],
   },
+  additionalLinkTags: [
+    {
+      rel: "apple-touch-icon",
+      href: "/images/favicon/apple-touch-icon.png",
+      sizes: "180x180",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/images/favicon/favicon-32x32.png",
+      sizes: "32x32",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/images/favicon/favicon-16x16.png",
+      sizes: "16x16",
+    },
+    {
+      rel: "icon",
+      href: "/images/favicon/favicon.ico",
+    },
+    {
+      rel: "manifest",
+      href: "/images/favicon/site.webmanifest",
+    },
+  ],
 };
