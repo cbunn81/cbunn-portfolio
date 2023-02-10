@@ -10,6 +10,7 @@ import { ProjectType } from "types";
 import FeaturedProjects from "@components/FeaturedProjects";
 import HeroHeading from "@components/HeroHeading";
 import Section from "@components/Section";
+import SectionHeading from "@components/SectionHeading";
 import { projectFilePaths, PROJECTS_PATH } from "@utils/mdxUtils";
 
 type IndexProps = {
@@ -41,6 +42,17 @@ export default function Index({ projects }: IndexProps) {
           </Link>
           .
         </Text>
+      </Section>
+      <Section>
+        <SectionHeading>Skills</SectionHeading>
+        <dl>
+          <dt>Languages</dt>
+          <dd>Python, JavaScript, TypeScript, Bash, PHP, SQL</dd>
+          <dt>Frameworks</dt>
+          <dd>Django, React.js, Next.js</dd>
+          <dt>Technologies</dt>
+          <dd>PostgreSQL, Docker, Linux</dd>
+        </dl>
       </Section>
       <FeaturedProjects projects={projects} />
     </>
